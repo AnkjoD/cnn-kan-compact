@@ -1,0 +1,43 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Research data and generated artifacts
+data/
+datasets/
+checkpoints/
+crop_cache/
+runs/
+*.pt
+*.pth
+*.ckpt
+*.dcm
+*.dicom
+predictions.csv
+*manifest*.csv
+
+# Credentials and local configuration
+.env
+*.key
+secrets.*
+configs/local.yaml
+
+# Kaggle and platform credentials
+kaggle.json
+.kaggle/
+.env.*
+!.env.example
+*.token
+# Local editor and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+archived/

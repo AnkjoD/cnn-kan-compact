@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fair2026-lms-kan"
+version = "0.1.0"
+description = "Reproducible code for LMS-ConvNeXt-KAN pneumonia classification experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "kaggle>=1.7",
+  "numpy>=1.24",
+  "opencv-python-headless>=4.8",
+  "pydicom>=2.4",
+  "pandas>=2.0",
+  "Pillow>=10.0",
+  "PyYAML>=6.0",
+  "scikit-learn>=1.3",
+  "torch>=2.5",
+  "torchvision>=0.20",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110

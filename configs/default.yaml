@@ -1,0 +1,34 @@
+paths:
+  # Copy this file to configs/local.yaml and edit only the local copy.
+  manifest: /path/to/rsna_split_manifest.csv
+  rsna_raw_root: /path/to/rsna_raw
+  rsna_root: /path/to/rsna
+  kermany_root: /path/to/chest_xray
+  lung_masks_root: /path/to/lung_masks
+  segmentation_checkpoint: /path/to/mobileunet_final.pt
+  crop_cache: /path/to/crop_cache
+  output_dir: runs
+
+data:
+  image_size: 224
+
+model:
+  head: fastkan
+  backbone_size: pico
+  fusion_dim: 256
+  hidden_dim: 64
+  grid_size: 4
+  dropout: 0.057746090438249055
+  num_classes: 2
+  drop_path_rate: 0.1
+
+training:
+  seed: 42
+  seeds: [42, 123, 2026]
+  batch_size: 32
+  learning_rate: 0.0014604436708287748
+  weight_decay: 0.00029030249796934505
+  label_smoothing: 0.05822648036553191
+  max_epochs: 15
+  patience: 5
+  num_workers: 2
